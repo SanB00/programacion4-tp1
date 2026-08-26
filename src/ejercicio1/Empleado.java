@@ -3,44 +3,52 @@ package ejercicio1;
 import java.time.LocalDate;
 
 public class Empleado extends Persona {
-    private final int legajo;
-    private static int contLegajo = 1000;
-    private String puesto;
-    
-    public Empleado() {
-        super();
-        this.legajo = contLegajo++; // Asigna el legajo automático si usas el constructor vacío
-    }
+	
+	   // Atributos
 
-    public Empleado(String dni, String nombre, String apellido, int edad, LocalDate fechaNacimiento,
-                    String direccion, String genero, String telefono, String email, String puesto, int legajo) {
-        super(dni, nombre, apellido, edad, fechaNacimiento, direccion, genero, telefono, email);
-        this.puesto = puesto;
-        this.legajo = legajo;
-        this.contLegajo = legajo;
-    }
+		private final int legajo;
+		private String puesto;
+		
+		private static int contLegajo = 999;
+		
+		//Constructores
+	
+		public Empleado() {
+			super();
+			legajo = 0;
+		}
 
-    // Getters y Setters
-    public int getLegajo() {
-        return legajo;
-    }
+		public Empleado(String dni, String nombre, String apellido, LocalDate fechaNacimiento, String direccion, String genero, String telefono, String email, String puesto) 
+		{
+			super(dni, nombre, apellido, fechaNacimiento, direccion, genero, telefono, email);
+			this.puesto = puesto;
+			legajo = ++contLegajo;
+		}
+		
+		//Metodo
 
-    public String getPuesto() {
-        return puesto;
-    }
+		public static int devuelveProximoLegajo() {
+			return contLegajo + 1;
+		}
 
-    public void setPuesto(String puesto) {
-        this.puesto = puesto;
-    }
+		// Getters y Setters
+		public int getLegajo() {
+			return legajo;
+		}
 
-	@Override
-	public String toString() {
-		return "Empleado [legajo=" + legajo + ", puesto=" + puesto + "] - " + super.toString();
-	}
-    
-	public int devuelveProximoLegajo()	{
-        this.contLegajo = contLegajo+1;
-        return contLegajo;
-	}
-    
+		public String getPuesto() {
+			return puesto;
+		}
+
+		public void setPuesto(String puesto) {
+			this.puesto = puesto;
+		}
+
+		// ToString
+
+		@Override
+		public String toString() {
+			return "EMPLEADO legajo: " + legajo + ", puesto: " + puesto + " | " + super.toString();
+		}
+
 }
