@@ -6,7 +6,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		Empleado obj = new Empleado("12345678A", // dni
+		Empleado emp1 = new Empleado("12345678A", // dni
 				"Juan", // nombre
 				"Pérez", // apellido
 				 LocalDate.of(2000, 12, 15), // fechaNacimiento (Año, Mes, Día)
@@ -16,9 +16,10 @@ public class Principal {
 				"juan.perez@email.com", // email
 				"Desarrollador Java" // legajo
 		);
-		System.out.println(obj);
+		System.out.println(emp1);
 		System.out.println("próximo legajo: " + Empleado.devuelveProximoLegajo());
 
 	}
 
 }
+
