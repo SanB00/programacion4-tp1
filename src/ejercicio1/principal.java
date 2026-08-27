@@ -10,13 +10,14 @@ public class Principal {
 				"Juan", // nombre
 				"Pérez", // apellido
 				 LocalDate.of(2000, 12, 15), // fechaNacimiento (Año, Mes, Día)
-				"Calle Falsa 123", // direccion
 				"Masculino", // genero
+				"Calle Falsa 123", // direccion
 				"+34600112233", // telefono
 				"juan.perez@email.com", // email
-				"Desarrollador Java" // legajo
+				"Desarrollador Java" // puesto	
 		);
-		System.out.println(emp1);
+		
+		System.out.println(emp1.toString());
 		System.out.println("próximo legajo: " + Empleado.devuelveProximoLegajo());
 
 	}

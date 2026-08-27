@@ -18,9 +18,9 @@ public class Empleado extends Persona {
 			legajo = 0;
 		}
 
-		public Empleado(String dni, String nombre, String apellido, LocalDate fechaNacimiento, String direccion, String genero, String telefono, String email, String puesto) 
+		public Empleado(String dni, String nombre, String apellido, LocalDate fechaNacimiento, String genero, String direccion, String telefono, String email, String puesto) 
 		{
-			super(dni, nombre, apellido, fechaNacimiento, direccion, genero, telefono, email);
+			super(dni, nombre, apellido, fechaNacimiento, genero, direccion, telefono, email);
 			this.puesto = puesto;
 			legajo = ++contLegajo;
 		}
