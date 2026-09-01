@@ -16,6 +16,7 @@ public class Empleado extends Persona {
 		public Empleado() {
 			super();
 			legajo = 0;
+			puesto = " ";
 		}
 
 		public Empleado(String dni, String nombre, String apellido, LocalDate fechaNacimiento, String genero, String direccion, String telefono, String email, String puesto) 
